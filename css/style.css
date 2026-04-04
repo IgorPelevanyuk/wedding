@@ -1799,6 +1799,16 @@ form label {
   opacity: 1;
 }
 
+.hidden {
+    display: none;
+}
+
+.hidden-animated {
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+}
+
 .custom-control {
   width: 100%;
   padding:10px 20px;

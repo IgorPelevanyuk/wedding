@@ -242,8 +242,8 @@
 			<form class="form-inline" action="https://docs.google.com/forms/d/e/1FAIpQLSdAIuDRop0oL8qWydhnOFoaJmhgZ8AOPOuWl4VOUJjGMy0Waw/formResponse" method="POST">
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Вы приедете?</h2>
-						<p>Пожалуйста, заполните форму</p>
+						<h2>Анкета гостя</h2>
+						<p>Для каждого гостя (кроме детей) необходимо заполнить форму отдельно</p>
 					</div>
 				</div>
 				<div class="row animate-box">
@@ -263,18 +263,24 @@
 							<div class="form-group custom-control">
 								<div class="row">
 									<div class="col-md-4 col-sm-12 radio-control">
-										<input type="radio" name="entry.932337178" value="Да" checked>
-										С удовольствием приду
+										<label>
+											<input type="radio" name="entry.932337178" value="Да">
+											С удовольствием приду
+										</label>
 									</div>
 
 									<div class="col-md-4 col-sm-12 radio-control">
-										<input type="radio" name="entry.932337178" value="Нет">
-										К сожалению, не смогу
+										<label>
+											<input type="radio" name="entry.932337178" value="Нет">
+											К сожалению, не смогу
+										</label>
 									</div>
 
 									<div class="col-md-4 col-sm-12 radio-control">
-										<input type="radio" name="entry.932337178" value="Не знаю">
-										Пока не знаю
+										<label>
+											<input type="radio" name="entry.932337178" value="Не знаю">
+											Пока не знаю
+										</label>
 									</div>
 								</div>
 
@@ -283,7 +289,7 @@
 					</div>
 				</div>
 
-				<div class="row animate-box">
+				<div class="row animate-box hidden" id="id_phone">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
 							<div class="form-group">
@@ -293,29 +299,69 @@
 						</div>
 					</div>
 				</div>
-				<div class="row animate-box">
+				<div class="row animate-box hidden" id="id_iskids">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
-							<label class="label-control">Если с вами будет кто-то ещё, перечислите их имена:</label><br>
+							<label class="label-control">Будут ли с вами дети?</label><br>
+							<div class="form-group custom-control">
+								<div class="row">
+									<div class="col-md-4 col-sm-12 radio-control">
+										<input type="radio" name="entry.366167629" value="Да">
+										Да
+									</div>
+
+									<div class="col-md-4 col-sm-12 radio-control">
+										<input type="radio" name="entry.366167629" value="Нет" checked>
+										Нет
+									</div> 
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="row animate-box hidden" id="id_kidslist">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-12 col-sm-12">
+							<label class="label-control">Перечислите их имена и что они будут есть (свинину или рыбу)</label><br>
 							<div class="form-group">
-								<label for="name" class="sr-only">Если с вами будет кто-то ещё, перечислите их имена</label>
-								<input class="form-control" id="plusones" name="entry.1907574074" placeholder="">
+								<label for="name" class="sr-only">Перечислите их имена и что они будут есть (свинину или рыбу)</label>
+								<input class="form-control" id="plusones" name="entry.1907574074" placeholder="Пример: Аня - рыбу, Ваня - свинину">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row animate-box">
+				<div class="row animate-box hidden" id="id_istransfer">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-12 col-sm-12">
+							<label class="label-control">Нужен ли вам трансфер из Твери в Барскую усадьбу и обратно?</label><br>
+							<div class="form-group custom-control">
+								<div class="row">
+									<div class="col-md-4 col-sm-12 radio-control">
+										<input type="radio" name="entry.1235360156" value="Да">
+										Да
+									</div>
+
+									<div class="col-md-4 col-sm-12 radio-control">
+										<input type="radio" name="entry.1235360156" value="Нет" checked>
+										Нет
+									</div> 
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="row animate-box hidden" id="id_transferlist">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
 							<label class="label-control">Если нужен трансфер, укажите количество мест и примерный адрес:</label><br>
 							<div class="form-group">
 								<label for="name" class="sr-only">Если нужен трансфер, укажите количество мест и примерный адрес</label>
-								<input class="form-control" id="transfer" name="entry.1267411682" placeholder="0, не нужен">
+								<input class="form-control" id="transfer" name="entry.1267411682" placeholder="Пример: 2 места, Химинститут">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row animate-box">
+				<div class="row animate-box hidden" id="id_food">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
 							<label class="label-control">Ваши предпочтения по еде:</label><br>
@@ -336,22 +382,22 @@
 					</div>
 				</div>
 
-				<div class="row animate-box">
+				<div class="row animate-box hidden" id="id_alergy">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
-							<label class="label-control">Пожалуйста сообщите, если у вас есть аллергия на какую-то еду</label><br>
+							<label class="label-control">Пожалуйста сообщите, если у вас есть аллергия на какие-либо продукты</label><br>
 							<div class="form-group">
-								<label for="name" class="sr-only">Пожалуйста сообщите, если у вас есть аллергия на какую-то еду</label>
+								<label for="name" class="sr-only">Пожалуйста сообщите, если у вас есть аллергия на какие-либо продукты</label>
 								<input class="form-control" id="allergies" name="entry.640295189" placeholder="Аллергии нет">
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="row animate-box">
+				<div class="row animate-box hidden" id="id_drinks">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
-							<label class="label-control">Ваши предпочтения по напиткам:</label><br>
+							<label class="label-control">Ваши предпочтения по напиткам (можно выбрать несколько):</label><br>
 							<div class="form-group custom-control">
 
 								<label><input type="checkbox" name="entry.268942127" value="Белое вино"> Белое вино</label><br>
@@ -440,6 +486,71 @@
         day: d.getDate(),
         enableUtc: false
     });
+
+
+
+	document.addEventListener("DOMContentLoaded", function () {
+		const attentand_fields = ["id_phone", "id_food", "id_drinks", "id_alergy", "id_iskids", "id_istransfer"];
+		const radio_is_coming = document.querySelectorAll('input[name="entry.932337178"]');
+		const radio_is_kids = document.querySelectorAll('input[name="entry.366167629"]');
+		const radio_is_transfer = document.querySelectorAll('input[name="entry.1235360156"]');
+
+		function showFields() {
+			attentand_fields.forEach(id => {
+				document.getElementById(id).classList.remove("hidden");
+			});
+		}
+
+		function hideFields() {
+			attentand_fields.forEach(id => {
+				document.getElementById(id).classList.add("hidden");
+			});
+		}
+
+		radio_is_coming.forEach(radio => {
+			radio.addEventListener("change", function () {
+				if (this.value === "Да") {
+					showFields();
+				} else {
+					hideFields();
+				}
+			});
+		});
+
+		radio_is_kids.forEach(radio => {
+			radio.addEventListener("change", function () {
+				if (this.value === "Да") {
+					document.getElementById("id_kidslist").classList.remove("hidden");
+				} else {
+					document.getElementById("id_kidslist").classList.add("hidden");
+				}
+			});
+		});
+
+		radio_is_transfer.forEach(radio => {
+			radio.addEventListener("change", function () {
+				if (this.value === "Да") {
+					document.getElementById("id_transferlist").classList.remove("hidden");
+				} else {
+					document.getElementById("id_transferlist").classList.add("hidden");
+				}
+			});
+		});
+
+		// Проверка при загрузке страницы
+		const checked = document.querySelector('input[name="entry.932337178"]:checked');
+		console.log(checked);
+		if (checked && checked.value === "Да") {
+			console.log("inside if");
+			showFields();
+		}
+		window.addEventListener("pageshow", function () {
+			const checked = document.querySelector('input[name="entry.932337178"]:checked');
+			if (checked && checked.value === "Да") {
+				showFields();
+			}
+		});
+	});
 </script>
 
 	</body>
