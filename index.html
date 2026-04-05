@@ -53,6 +53,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -66,7 +68,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
+	<!-- <nav class="fh5co-nav" role="navigation">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
@@ -76,7 +78,7 @@
 			</div>
 			
 		</div>
-	</nav>
+	</nav> -->
 
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2_rotated_crop.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -86,7 +88,11 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Игорь и Вероника</h1>
-							<h2>У нас свадьба через</h2>
+
+							<h2>1.08.2026</h2>
+							<h2>Тверская область, Барская усадьба</h2>
+							<h2 style="visibility: hidden">До торжества осталось:</h2>
+							<h2 style='font-size: 30px; font-family: "Inter";'>До торжества осталось:</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<!-- <p><a href="#" class="btn btn-default btn-sm">Зарегистрироваться</a></p> -->
 						</div>
@@ -100,9 +106,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Привет!</h2>
-					<h3>1 августа 2026, Барская Усадьба, Тверская область</h3>
-					<p>Мы приглашаем вас отметить нашу свадьбу!</p>
+					<h2>Дорогие родные и близкие!</h2>
+					
+					<p>Мы приглашаем Вас на нашу свадьбу, чтобы разделить это особенное событие и стать частью нашей семейной истории.</p>
+					<h3 style="color: #828282; margin-bottom: 10px;">Дата: 1 августа</h3>
+					<h3 style="color: #828282;">Место: Барская Усадьба, Тверская область</h3>
+
 				</div>
 			</div>
 			<div class="couple-wrap animate-box">
@@ -111,6 +120,7 @@
 						<img src="images/groom.jpg" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-groom">
+						<h3 class="placeholder" style="visibility: hidden">Игорь Пелеванюк</h3>
 						<h3>Игорь Пелеванюк</h3>
 						<p></p>
 					</div>
@@ -121,6 +131,7 @@
 						<img src="images/bride.jpg" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-bride">
+						<h3 class="placeholder" style="visibility: hidden">Вероника Смирнова </h3>
 						<h3>Вероника Смирнова</h3>
 						<p></p>
 					</div>
@@ -134,8 +145,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>Расписание</span>
-					<h2>Торжества</h2>
+					<!-- <span>Расписание</span> -->
+					<h2>Расписание торжества</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -144,12 +155,12 @@
 						<div class="col-md-10 col-md-offset-1">
 							<div class="col-md-4 col-sm-4 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Сбор дорогих гостей</h3>
+									<h3>Сбор</br>гостей</h3>
 									<div class="">
 										<i class="icon-clock"></i>
 										<span>14:30-15:00</span>
 									</div>
-									<p>Чуть соберёмся, усядемся и начнём</p>
+									<p>Приветственный фуршет у беседки</p>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4 text-center">
@@ -157,9 +168,9 @@
 									<h3>Выездная Регистрация</h3>
 									<div class="">
 										<i class="icon-clock"></i>
-										<span>15:00-15:30</span>
+										<span>15:00-16:00</span>
 									</div>
-									<p>Прямо возле нашей беседки</p>
+									<p>Свадебная арка возле беседки</p>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4 text-center">
@@ -167,9 +178,9 @@
 									<h3>Свадебный банкет</h3>
 									<div class="">
 										<i class="icon-clock"></i>
-										<span>15:30-23:00</span>
+										<span>16:00-23:00</span>
 									</div>
-									<p>Все приглашаются на праздничный ужин</p>
+									<p>Праздничный банкет, веселье, танцы</p>
 								</div>
 							</div>
 						</div>
@@ -197,7 +208,7 @@
 						</span>
 						<div class="feature-copy">
 							<h3>Трансфер</h3>
-							<p>Для гостей может быть организован трансфер из г. Твери до места проведения торжества (в 13:00) и обратно (в 23:00) при наличии запроса. Время в пути ~1 час. Будет обозначена точка сбора, из которой вас заберут днем, и куда привезут вечером. Пожалуйста, уточните в анкете, необходим ли вам трансфер.</p>
+							<p>Для гостей может быть организован трансфер из Твери до места проведения торжества (в 13:00) и обратно (в 23:00) при наличии запроса. Время в пути ~1 час. Будет выбрана точка сбора, из которой вас заберут днем, и куда привезут вечером. Пожалуйста, уточните в анкете, необходим ли вам трансфер.</p>
 						</div>
 					</div>
 
@@ -217,7 +228,7 @@
 						</span>
 						<div class="feature-copy">
 							<h3>Проверьте прогноз погоды</h3>
-							<p>Несмотря на то, что торжество будет проходить в отапливаемой беседке, некоторые активности будут проходить на улице. Пожалуйста, учтите этот факт.</p>
+							<p>Несмотря на то, что торжество будет проходить в отапливаемой беседке, некоторые активности будут проходить на улице. Возможно пригодится тёплая одежда или зонт.</p>
 						</div>
 					</div>
 
@@ -229,7 +240,9 @@
 						<div class="overlay"></div>
 					</div>
 				</div>
+
 			</div>
+			<div class="animate-box custom-map" id="map"></div>
 
 			
 		</div>
@@ -243,7 +256,7 @@
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<h2>Анкета гостя</h2>
-						<p>Для каждого гостя (кроме детей) необходимо заполнить форму отдельно</p>
+						<p style="color:white">Для каждого гостя (кроме детей) необходимо заполнить форму отдельно</p>
 					</div>
 				</div>
 				<div class="row animate-box">
@@ -263,25 +276,19 @@
 							<div class="form-group custom-control">
 								<div class="row">
 									<div class="col-md-4 col-sm-12 radio-control">
-										<label>
+										<label style="margin: 0px;">
 											<input type="radio" name="entry.932337178" value="Да">
-											С удовольствием приду
+											С удовольствием приеду
 										</label>
 									</div>
 
 									<div class="col-md-4 col-sm-12 radio-control">
-										<label>
+										<label style="margin: 0px;">
 											<input type="radio" name="entry.932337178" value="Нет">
 											К сожалению, не смогу
 										</label>
 									</div>
 
-									<div class="col-md-4 col-sm-12 radio-control">
-										<label>
-											<input type="radio" name="entry.932337178" value="Не знаю">
-											Пока не знаю
-										</label>
-									</div>
 								</div>
 
 							</div>
@@ -306,13 +313,17 @@
 							<div class="form-group custom-control">
 								<div class="row">
 									<div class="col-md-4 col-sm-12 radio-control">
-										<input type="radio" name="entry.366167629" value="Да">
-										Да
+										<label style="margin: 0px;">
+											<input type="radio" name="entry.366167629" value="Да">
+											Да
+										</label>
 									</div>
 
 									<div class="col-md-4 col-sm-12 radio-control">
-										<input type="radio" name="entry.366167629" value="Нет" checked>
-										Нет
+										<label style="margin: 0px;">
+											<input type="radio" name="entry.366167629" value="Нет" checked>
+											Нет
+										</label>
 									</div> 
 								</div>
 							</div>							
@@ -337,13 +348,17 @@
 							<div class="form-group custom-control">
 								<div class="row">
 									<div class="col-md-4 col-sm-12 radio-control">
-										<input type="radio" name="entry.1235360156" value="Да">
-										Да
+										<label style="margin: 0px;">
+											<input type="radio" name="entry.1235360156" value="Да">
+											Да
+										</label>
 									</div>
 
 									<div class="col-md-4 col-sm-12 radio-control">
-										<input type="radio" name="entry.1235360156" value="Нет" checked>
-										Нет
+										<label style="margin: 0px;">
+											<input type="radio" name="entry.1235360156" value="Нет" checked>
+											Нет
+										</label>
 									</div> 
 								</div>
 							</div>							
@@ -364,17 +379,21 @@
 				<div class="row animate-box hidden" id="id_food">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
-							<label class="label-control">Ваши предпочтения по еде:</label><br>
+							<label class="label-control">Какое горячее вы бы предпочли:</label><br>
 							<div class="form-group custom-control">
 								<div class="row">
-									<div class="col-md-2 col-sm-12 radio-control">
+									<div class="col-md-4 col-sm-12 radio-control">
+										<label style="margin: 0px;">
 											<input class="radio-control" type="radio" name="entry.1901511945" value="Мясо" checked>
-											Мясо
+											Мясо (свинина)
+										</label>
 									</div>
 
-									<div class="col-md-2 col-sm-12 radio-control">
+									<div class="col-md-4 col-sm-12 radio-control">
+										<label style="margin: 0px;">
 											<input class="radio-control" type="radio" name="entry.1901511945" value="Рыба">
 											Рыба
+										</label>
 									</div>
 								</div>
 							</div>
@@ -385,10 +404,10 @@
 				<div class="row animate-box hidden" id="id_alergy">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12">
-							<label class="label-control">Пожалуйста сообщите, если у вас есть аллергия на какие-либо продукты</label><br>
+							<label class="label-control">Пожалуйста сообщите, есть ли у вас пищевые аллергии:</label><br>
 							<div class="form-group">
-								<label for="name" class="sr-only">Пожалуйста сообщите, если у вас есть аллергия на какие-либо продукты</label>
-								<input class="form-control" id="allergies" name="entry.640295189" placeholder="Аллергии нет">
+								<label for="name" class="sr-only">Пожалуйста сообщите, есть ли у вас пищевые аллергии</label>
+								<input class="form-control" id="allergies" name="entry.640295189" placeholder="Аллергий нет">
 							</div>
 						</div>
 					</div>
@@ -486,6 +505,22 @@
         day: d.getDate(),
         enableUtc: false
     });
+
+	ymaps.ready(function () {
+		var map = new ymaps.Map("map", {
+			center: [56.721464, 35.367429], // координаты
+			zoom: 15
+		});
+
+		var placemark = new ymaps.Placemark(
+			[56.721464, 35.367429],
+			{
+				balloonContent: "Место свадьбы 💍"
+			}
+		);
+
+		map.geoObjects.add(placemark);
+	});
 
 
 
